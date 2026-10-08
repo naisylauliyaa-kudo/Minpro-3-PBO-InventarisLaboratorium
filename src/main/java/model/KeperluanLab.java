@@ -4,15 +4,15 @@
  */
 package model;
 
-public class KeperluanLab {
+public abstract class KeperluanLab {
     protected int id;
     protected String nama;
     protected int jumlah;
 
     public KeperluanLab(int id, String nama, int jumlah) {
-        this.id = id;
-        this.nama = nama;
-        this.jumlah = jumlah;
+        setId(id);
+        setNama(nama);
+        setJumlah(jumlah);
     }
 
     public int getId() {
@@ -28,18 +28,31 @@ public class KeperluanLab {
     }
 
     public void setId(int id) {
-        this.id = id;
+        if (id <= 0) {
+            System.out.println("Gagal: ID tidak boleh 0 atau minus!");
+        } else {
+            this.id = id;
+        }
     }
 
     public void setNama(String nama) {
-        this.nama = nama;
+        if (nama == null || nama.trim().isEmpty()) {
+            System.out.println("Gagal: Nama tidak boleh kosong!");
+        } else if (!nama.matches(".*[a-zA-Z0-9].*")) {
+            System.out.println("Gagal: Nama tidak boleh hanya berisi simbol atau spasi!");
+        } else {
+            this.nama = nama;
+        }
     }
 
     public void setJumlah(int jumlah) {
-        this.jumlah = jumlah;
+        if (jumlah <= 0) {
+            System.out.println("Gagal: Jumlah tidak boleh 0 atau minus!");
+        } else {
+            this.jumlah = jumlah;
+        }
     }
 
-    public void tampilkanInfo() {
-        System.out.println("ID: " + id + ", Nama: " + nama + ", Jumlah: " + jumlah);
-    }
+    public abstract void tampilkanInfo();
+    
 }

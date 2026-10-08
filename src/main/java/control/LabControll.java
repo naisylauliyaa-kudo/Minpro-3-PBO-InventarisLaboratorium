@@ -17,10 +17,9 @@ public class LabControll {
         daftarBahan.add(new BahanLab(201, "Alkohol 96%", 10, "100 ml"));
     }
     
-    // Generator ID Otomatis untuk Alat
     public int generateIdAlat() {
         if (daftarAlat.isEmpty()) {
-            return 101; // ID awal jika data alat kosong
+            return 101; 
         }
         int maxId = daftarAlat.get(0).getId();
         for (AlatLab alat : daftarAlat) {
@@ -31,10 +30,9 @@ public class LabControll {
         return maxId + 1;
     }
 
-    // Generator ID Otomatis untuk Bahan
     public int generateIdBahan() {
         if (daftarBahan.isEmpty()) {
-            return 201; // ID awal jika data bahan kosong
+            return 201; 
         }
         int maxId = daftarBahan.get(0).getId();
         for (BahanLab bahan : daftarBahan) {
@@ -56,9 +54,43 @@ public class LabControll {
             return;
         }
         System.out.println("\n======== DAFTAR ALAT LABORATORIUM ========");
+        
+        if (!daftarAlat.isEmpty()) {
+            daftarAlat.get(0).cetakLabelKategori();
+            System.out.println("----------------------------------------------------------");
+        }
+
         for (int i = 0; i < daftarAlat.size(); i++) {
             System.out.print((i + 1) + ". ");
             daftarAlat.get(i).tampilkanInfo(); 
+        }
+    }  
+    
+    public void cariAlat(int idAlat) {
+        boolean ditemukan = false;
+        for (AlatLab alat : daftarAlat) {
+            if (alat.getId() == idAlat) {
+                System.out.println("Alat ditemukan: ");
+                alat.tampilkanInfo();
+                ditemukan = true;
+                break;
+            }
+        }
+        if (!ditemukan) {
+            System.out.println("Alat dengan ID " + idAlat + " tidak ditemukan.");
+        }
+    }
+
+    public void cariAlat(String namaAlat) {
+        boolean ditemukan = false;
+        for (AlatLab alat : daftarAlat) {
+            if (alat.getNama().toLowerCase().contains(namaAlat.toLowerCase())) {
+                alat.tampilkanInfo();
+                ditemukan = true;
+            }
+        }
+        if (!ditemukan) {
+            System.out.println("Alat dengan nama '" + namaAlat + "' tidak ditemukan.");
         }
     }
 
@@ -192,7 +224,7 @@ public class LabControll {
                 }
             }
             daftarPeminjaman.remove(indexHapus);
-            System.out.println("Pengembalian berhasil dicatot. Stok alat telah dikembalikan ^-^");
+            System.out.println("Pengembalian berhasil dicatat. Stok alat telah dikembalikan ^-^");
         } else {
             System.out.println("ID Peminjaman tidak ditemukan.");
         }

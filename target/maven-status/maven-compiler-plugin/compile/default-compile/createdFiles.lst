@@ -1,3 +1,4 @@
+model\InformasiLab.class
 model\KeperluanLab.class
 control\LabControll.class
 view\TampilkanInventarisLab.class
