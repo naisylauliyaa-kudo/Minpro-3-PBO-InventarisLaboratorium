@@ -134,32 +134,35 @@ Gambar tersebut memperlihatkan bahwa data bahan baru sudah berhasil ditambahkan.
 ---
 
 ### **2. Lihat Data**
-<img width="347" height="126" alt="image" src="https://github.com/user-attachments/assets/36b58972-8e1c-47a8-9e79-8e75e2f93811" />
+<img width="369" height="130" alt="image" src="https://github.com/user-attachments/assets/23b49bc0-2841-4c35-9a26-6bceedbae81d" />
 
 
 Gambar ini menunjukkan sub-menu saat pengguna memilih opsi nomor 2, yaitu Lihat Data & Pencarian. Pada menu ini, pengguna dapat memilih untuk melihat daftar data alat laboratorium, daftar data bahan laboratorium, atau menggunakan fitur Cari Alat yang menerapkan konsep Method Overloading dalam sistem.
 
 #### **a. Lihat Data Alat**
-<img width="505" height="217" alt="image" src="https://github.com/user-attachments/assets/78abf932-b449-40ba-9ad1-a4929e456786" />
+<img width="574" height="203" alt="image" src="https://github.com/user-attachments/assets/683764c8-bc0d-4650-bc74-3b30ad62e748" />
+
 
 Gambar ini menunjukkan hasil saat pengguna memilih untuk melihat daftar alat laboratorium (pilihan 1 pada menu lihat data). Sistem menampilkan seluruh data alat yang tersimpan secara rapi, lengkap dengan informasi ID alat, nama alat, serta jumlah stok yang tersedia.
 
 #### **b. Lihat Data Bahan**
-<img width="481" height="201" alt="image" src="https://github.com/user-attachments/assets/e69b0b17-1738-4709-99e8-33a3c63f2bf8" />
+<img width="490" height="160" alt="image" src="https://github.com/user-attachments/assets/21c9e50a-aa32-45c4-bbc5-ee5582faa533" />
+
 
 Gambar ini menunjukkan hasil saat pengguna memilih untuk melihat daftar bahan laboratorium (pilihan 2 pada menu lihat data). Sistem menampilkan seluruh data bahan yang tersimpan, lengkap dengan informasi ID bahan, nama bahan, jumlah stok, beserta satuannya.
 
 #### **c. Cari Alat (Demonstrasi Overloading)**
 
-<img width="323" height="177" alt="image" src="https://github.com/user-attachments/assets/f59f2370-3739-42ca-ba6e-74240f063b5b" />
+<img width="319" height="181" alt="image" src="https://github.com/user-attachments/assets/a59efa1d-c430-46ec-9c81-434a89e16c0d" />
+
 
 Gambar ini menunjukkan proses saat pengguna memilih opsi nomor 3, yaitu Cari Alat, untuk menerapkan konsep Method Overloading. Pengguna dapat memilih metode pencarian berdasarkan ID alat berupa angka (pilihan 1) atau nama alat berupa teks (pilihan 2). Pilihan tersebut akan memanggil method cariAlat yang sesuai pada controller.
 
-<img width="562" height="204" alt="image" src="https://github.com/user-attachments/assets/ff75bd14-161a-465e-9bfc-702e56155048" />
+<img width="552" height="204" alt="image" src="https://github.com/user-attachments/assets/7c5e640b-1ec5-4168-9e86-5e72de3e83d7" />
 
 Gambar ini menunjukkan validasi input pada fitur pencarian alat berdasarkan ID. Sistem menolak input yang tidak valid, seperti angka minus (-999999) dan teks (Mikroskop). Setelah pengguna memasukkan ID yang benar, yaitu 102, sistem berhasil menjalankan method cariAlat(int idAlat) dan menampilkan informasi alat secara lengkap.
 
-<img width="640" height="221" alt="image" src="https://github.com/user-attachments/assets/14887351-c088-45fe-80b6-95b902d71ec5" />
+<img width="630" height="220" alt="image" src="https://github.com/user-attachments/assets/21b10fa1-35d5-4716-a871-7f718e83326d" />
 
 Gambar ini menunjukkan validasi input teks pada fitur pencarian alat. Sistem menolak input yang kosong atau hanya berisi angka, spasi, dan simbol, lalu meminta pengguna memasukkan data yang benar. Setelah pengguna memasukkan nama alat "Mikroskop", sistem menjalankan method cariAlat(String namaAlat) sebagai penerapan Method Overloading dan menampilkan informasi alat tersebut.
 
@@ -330,7 +333,8 @@ Fungsi utama:
 
 ## 8. Penerapan Wajib
 ### a. Menerapkan Struktur MVC
-<img width="313" height="262" alt="image" src="https://github.com/user-attachments/assets/3dc624d0-3fbd-4f7d-960e-46c95cefbd5b" />
+<img width="310" height="256" alt="image" src="https://github.com/user-attachments/assets/4090c272-1abe-4778-a9ff-7c0bfb97613b" />
+
 
 Gambar di atas menunjukkan struktur direktori proyek **InventarisLab** di NetBeans yang menerapkan arsitektur MVC (Model-View-Controller) untuk memisahkan logika data, antarmuka pengguna, dan alur kontrol program, sehingga kode lebih terstruktur, mudah dikelola, dan bersifat modular. Berikut adalah pembagian package di dalam program:
 1. **com.mycompany.inventarislab (Main Package)**
@@ -348,7 +352,7 @@ Berisi class `LabControll.java` yang bertindak sebagai penghubung (jembatan) ant
 Berisi class `TampilkanInventarisLab.java` yang bertanggung jawab penuh terhadap tampilan antarmuka (*user interface*) program kepada pengguna, termasuk pengelolaan menu teks, daftar inventaris, dan pesan interaktif.
 
 ### b. Polymorphism
- **Overriding**
+ **Overriding**   
 <img width="882" height="95" alt="image" src="https://github.com/user-attachments/assets/7a90da65-7421-4d16-8078-6b5e973c4cd0" />    
 
 <img width="868" height="99" alt="image" src="https://github.com/user-attachments/assets/77843cc0-609d-45bb-a4c5-74f6f1376506" />    
@@ -364,10 +368,11 @@ Fungsi
 
  **Overloading**
 
-<img width="695" height="279" alt="image" src="https://github.com/user-attachments/assets/248e823c-ea8c-4320-84d9-92cbf661426e" />    
+<img width="683" height="259" alt="image" src="https://github.com/user-attachments/assets/af67c1ef-bebe-435c-a218-a3a1b56a2a10" />
+   
 
+<img width="811" height="351" alt="image" src="https://github.com/user-attachments/assets/164faf35-6f9c-4dd8-b7af-33b8842e2296" />
 
-<img width="859" height="359" alt="image" src="https://github.com/user-attachments/assets/10951533-4e3b-4582-aa49-51a9aac1fb1e" />
 
 Potongan kode di atas menunjukkan penerapan konsep Polymorphism melalui teknik Method Overloading, di mana sebuah class (seperti pada class LabControll) mendefinisikan beberapa method dengan nama yang sama namun memiliki tipe atau jumlah parameter yang berbeda.
 
@@ -381,18 +386,21 @@ Fungsi:
 ### c. Abstraction
  **Penerapan di Superclass**  
  
-<img width="359" height="102" alt="image" src="https://github.com/user-attachments/assets/fa93fb79-a030-4593-9db2-c4f99779d522" />
+<img width="396" height="94" alt="image" src="https://github.com/user-attachments/assets/b27e787e-1f88-49b9-82d6-e56d4108c74a" />
+
 
 KeperluanLab dideklarasikan menggunakan keyword abstract, yang menandakan bahwa kelas ini berfungsi sebagai cetak biru (blueprint) umum bagi seluruh jenis item di laboratorium.
 
-<img width="377" height="84" alt="image" src="https://github.com/user-attachments/assets/da75ac55-6544-4e9e-a3ab-c7179c96088d" />
+<img width="361" height="79" alt="image" src="https://github.com/user-attachments/assets/e1d9713e-4bfe-4488-967d-6c0f1daeddd9" />
+
 
 Method public abstract void tampilkanInfo(); didefinisikan tanpa memiliki isi atau blok tubuh (body method), dan ditandai dengan keyword abstract.
 Keberadaan abstract method ini berfungsi sebagai kontrak wajib yang harus diimplementasikan atau ditulis ulang (override) oleh setiap subclass (kelas turunan) di bawahnya, seperti AlatLab dan BahanLab.
 
 **Penerapan di Subclass**
 
-<img width="932" height="99" alt="image" src="https://github.com/user-attachments/assets/a64a09de-d43a-46f7-9468-f5258a69952b" />
+<img width="970" height="89" alt="image" src="https://github.com/user-attachments/assets/94b5d69f-f8a7-4678-94c6-cae0555233db" />
+
 
 Potongan kode di atas menunjukkan penerapan Abstraction, yaitu class AlatLab mewarisi abstract class KeperluanLab dan harus mengisi method abstrak yang sudah ditentukan oleh class induknya.
 Penggunaan anotasi @Override menunjukkan bahwa method tampilkanInfo() dari class induk harus dibuat kembali di class AlatLab. Dengan begitu, method yang sebelumnya masih berupa kerangka kosong dapat memiliki fungsi yang jelas sesuai kebutuhan class tersebut.
@@ -401,7 +409,8 @@ Penggunaan anotasi @Override menunjukkan bahwa method tampilkanInfo() dari class
 ---
 ## 9. Penerapan Nilai Tambah (Interface)
 
-<img width="308" height="88" alt="image" src="https://github.com/user-attachments/assets/c6e23315-1cc3-45fc-9407-329d1a54891b" />
+<img width="307" height="91" alt="image" src="https://github.com/user-attachments/assets/f297b20a-8277-43a8-8af2-7ba380497e75" />
+
 
 Class dideklarasikan sebagai public interface InformasiLab, yang berfungsi sebagai kontrak atau aturan yang harus diikuti oleh class yang menggunakannya. Di dalamnya terdapat method void cetakLabelKategori(); yang wajib diimplementasikan oleh class tersebut.
 
