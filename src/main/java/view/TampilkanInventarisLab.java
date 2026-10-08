@@ -171,11 +171,24 @@ public class TampilkanInventarisLab {
 
                         if (metodeCari.equals("1")) {
                             int cariId = inputValidasiAngkaPositif("Masukkan ID Alat: ");
-                            crud.cariAlat(cariId); // Memanggil overloading method cariAlat(int)[cite: 9]
+                            crud.cariAlat(cariId); 
                         } else if (metodeCari.equals("2")) {
-                            System.out.print("Masukkan Nama Alat yang dicari: ");
-                            String cariNama = input.nextLine();
-                            crud.cariAlat(cariNama); // Memanggil overloading method cariAlat(String)[cite: 9]
+                            String cariNama = "";
+                            while (true) {
+                                System.out.print("Masukkan Nama Alat yang dicari: ");
+                                cariNama = input.nextLine();
+
+                                if (cariNama.isEmpty()) {
+                                    System.out.println("Nama tidak boleh kosong!");
+                                    continue;
+                                }
+                                if (!cariNama.matches(".*[a-zA-Z].*")) {
+                                    System.out.println("Gagal: Nama alat harus mengandung huruf (tidak boleh hanya simbol, spasi, atau angka)!");
+                                    continue;
+                                }
+                                break;
+                            }
+                            crud.cariAlat(cariNama); 
                         } else {
                             System.out.println("Metode pencarian tidak valid.");
                         }

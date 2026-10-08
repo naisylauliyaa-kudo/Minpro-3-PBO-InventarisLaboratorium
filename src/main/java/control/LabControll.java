@@ -82,13 +82,20 @@ public class LabControll {
     }
 
     public void cariAlat(String namaAlat) {
+        if (namaAlat == null || namaAlat.trim().isEmpty() || !namaAlat.matches(".*[a-zA-Z].*")) {
+            System.out.println("Gagal: Nama alat tidak boleh kosong, hanya spasi, atau hanya simbol!");
+            return;
+        }
+        
         boolean ditemukan = false;
+        System.out.println("\n====== HASIL PENCARIAN ALAT ======");
         for (AlatLab alat : daftarAlat) {
             if (alat.getNama().toLowerCase().contains(namaAlat.toLowerCase())) {
                 alat.tampilkanInfo();
                 ditemukan = true;
             }
         }
+        
         if (!ditemukan) {
             System.out.println("Alat dengan nama '" + namaAlat + "' tidak ditemukan.");
         }

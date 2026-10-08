@@ -56,3 +56,5 @@ public abstract class KeperluanLab {
     public abstract void tampilkanInfo();
     
 }
+
+
